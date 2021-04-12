@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/home'
+  get 'user/home'
   root 'login_page#login'
   #get 'login_page/login'
   get 'admin/home'
