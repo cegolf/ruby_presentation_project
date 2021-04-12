@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :feedbacks
-  resources :groups
   resources :presentations
   resources :users
   #root login
