@@ -13,21 +13,3 @@
  *= require_tree .
  *= require_self
  */
-.small-middle-container {
-  margin: auto;
-  width: 35%;
-}
-.login-container {
-  margin: auto;
-  padding-top: 8em;
-}
-.header {
-  background-color: #ee7575;
-  height: 8em;
-}
-
-.footer {
-  position: absolute;
-  background-color: #ee7575;
-  min-height: 8em;
-}
