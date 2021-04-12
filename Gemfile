@@ -3,8 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 #bootstrap
-gem 'bootstrap'
-
 gem "bootstrap-sass"
 
 #bcrypt for login
