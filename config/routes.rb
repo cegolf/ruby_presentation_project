@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  root 'sessions#new'
   resources :feedbacks
   resources :presentations
   resources :users
-  #root login
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  #get '/login' to: 'sessions#new'
+  delete '/login', to: 'sessions#sdestroy'
+  post '/login', to: 'sessions#create'
+ 
 end
