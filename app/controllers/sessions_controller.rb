@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       log_in user
 
       #change this line to redirect to the presentation index
-      redirect_to user
+      redirect_to presentations_url
     else
       #create error
       flash[:danger] = 'Invalid email/password combination'
