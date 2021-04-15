@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :presentations
   resources :users
   #get '/login' to: 'sessions#new'
-  delete '/login', to: 'sessions#sdestroy'
+  delete '/logout', to: 'sessions#destroy'
   post '/login', to: 'sessions#create'
  
 end
