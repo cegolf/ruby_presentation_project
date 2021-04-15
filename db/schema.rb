@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_184525) do
+ActiveRecord::Schema.define(version: 2021_04_13_014038) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.text "content"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_04_12_184525) do
     t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
 end

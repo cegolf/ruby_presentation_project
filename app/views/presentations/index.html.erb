@@ -7,11 +7,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
+      <%if logged_in? && current_user.role == "instructor" %>
       <div class="leftside">
         <p id="notice"><%= notice %></p>
         
         <h1>Student Roster</h1>
-        
+      
         <table>
           <thead>
             <tr>
@@ -34,14 +35,16 @@
                 <td style="padding:0 5px;"><%= link_to 'Edit', edit_user_path(user) %></td>
                 <td><%= link_to 'Remove', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
+             
             <% end %>
           </tbody>
+           <%= link_to 'Add Student', new_user_path, class: "btn btn-success", id: "add-student-btn" %>
         </table>
 
-        <br>
-        <%= link_to 'Add Student', new_user_path %>
-
-      </div>
+        <br/>
+        
+     </div>
+    <% end %>
     </div>
     <div class="col-md-6">
       <div class="rightside">
@@ -66,16 +69,18 @@
                 <td style="padding:0 15px;"><%= presentation.date %></td>
                 <td style="padding:0 25px;"><span class="badge badge-primary badge-pill">0%</span></td>
                 <td style="padding:0 5px;"><%= link_to 'Show', presentation %></td>
+                <%if logged_in? && current_user.role == "instructor" %>
                 <td style="padding:0 5px;"><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
                 <td><%= link_to 'Delete', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                 <%end%>
               </tr>
+              <%= link_to 'New Presentation', new_presentation_path, class: "btn btn-success", id: "add-presentation-btn" if current_user.role == "instructor"%>
             <% end %>
           </tbody>
         </table>
         <br>
-
-        <%= link_to 'New Presentation', new_presentation_path %>
       </div>
     </div>
   </div>
 </div>
+

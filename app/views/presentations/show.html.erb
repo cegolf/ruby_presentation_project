@@ -10,5 +10,11 @@
   <%= @presentation.date %>
 </p>
 
+<p>
+  <strong>Presentor:</strong>
+  <%= @presentation.assigned_to %>
+</p>
+
+
 <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
 <%= link_to 'Back', presentations_path %>

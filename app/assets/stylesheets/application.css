@@ -14,9 +14,50 @@
  *= require_self
  */
 
-
-.leftside, .rightside{
-	font-size: large;
-	color: black;
-
+.leftside,
+.rightside {
+  font-size: large;
+  color: black;
+}
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.header-container {
+  margin-top: 0%;
+  background-color: #ee7d7d;
+  height: 8em;
+}
+.footer {
+  background-color: #ee7d7d;
+  height: 8em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+input,
+textarea,
+select,
+.uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+input {
+  height: auto !important;
+}
+#submit-button {
+  margin-top: 1em;
+}
+#add-presentation-btn,
+#add-student-btn {
+  color: black;
+}
+#logout-btn {
+  margin-right: 0%;
+  text-align: right;
+  margin-top: 2.5em;
 }
