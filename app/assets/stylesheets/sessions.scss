@@ -2,5 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 #login-btn {
-  margin-top: 1em;
+  margin-top: 2em;
+}
+.login-container {
+  margin-left: 40%;
+  padding-top: 10em;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 2px;
+}
+.login-header-container {
+  text-align: left;
+  text-shadow: 2px 2px 2px #000000;
 }
