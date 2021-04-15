@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Presentations</h1>
-
 <table>
   <thead>
     <tr>
@@ -12,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @presentations.each do |presentation| %>
+  <% @presentations.each do |presentation| %>
       <tr>
         <td><%= presentation.topic %></td>
         <td><%= presentation.date %></td>
@@ -21,10 +20,45 @@
         <td><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
         <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>
+        <td><%= link_to 'Leave Feedback', new_feedback_path%></td>
       </tr>
-    <% end %>
+    <%end%>
   </tbody>
 </table>
+<br>
+
+
+<table>
+  <thead>
+  <%if current_user.role == "student"%>
+    <tr>
+      <th>My Presentations</th>
+      <th colspan="3"></th>
+    </tr>
+    <%end%>
+  </thead>
+<tbody>
+
+
+<%@presentations.each do |presentation| %>
+  <tr>
+      <%if logged_in? && current_user.name == presentation.assigned_to %>
+      <td><%= presentation.topic %></td>
+      <td><%= presentation.date %></td>
+      <%end%>
+      <%end%>
+      </tr>
+      <% Feedback.all.each do |feedback| %>
+        <tr>
+        <%if logged_in? && (current_user.name == feedback.presentation_id || current_user.role=="instructor") %>
+          <td><%= link_to 'Show Feedback from ' + feedback.submitted_by  , feedback %></td>
+          <%end%>
+        </tr>
+        <%end%>
+  </tbody>
+</table>
+
+
 
 <br>
 
