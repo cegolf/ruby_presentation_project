@@ -57,7 +57,14 @@ input {
   color: black;
 }
 #logout-btn {
-  margin-right: 0%;
   text-align: right;
   margin-top: 2.5em;
+  right: 15em;
+  position: absolute;
+}
+.content-container {
+  background-color: silver;
+  margin-bottom: 0%;
+  position: relative;
+  height: 80vh;
 }

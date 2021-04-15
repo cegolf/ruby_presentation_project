@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_014038) do
+ActiveRecord::Schema.define(version: 2021_04_15_132457) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.text "content"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_04_13_014038) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "assigned_to"
+    t.integer "grade"
   end
 
   create_table "users", force: :cascade do |t|
