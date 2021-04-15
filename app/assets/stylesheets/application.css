@@ -13,6 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.leftside,
+.rightside {
+  font-size: large;
+  color: black;
+}
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -45,4 +51,20 @@ input {
 }
 #submit-button {
   margin-top: 1em;
+}
+#add-presentation-btn,
+#add-student-btn {
+  color: black;
+}
+#logout-btn {
+  text-align: right;
+  margin-top: 2.5em;
+  right: 15em;
+  position: absolute;
+}
+.content-container {
+  background-color: silver;
+  margin-bottom: 0%;
+  position: relative;
+  height: 80vh;
 }

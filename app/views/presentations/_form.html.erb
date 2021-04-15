@@ -26,6 +26,12 @@
     <%= form.text_field :assigned_to %>
   </div>
 
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.number_field :grade, in: 0..100, step: 0.5 %>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

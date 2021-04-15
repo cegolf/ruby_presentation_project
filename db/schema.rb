@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_04_15_163852) do
     t.string "assigned_to"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "grade"
   end
 
   create_table "users", force: :cascade do |t|

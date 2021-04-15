@@ -14,7 +14,14 @@
   <strong>Presentor:</strong>
   <%= @presentation.assigned_to %>
 </p>
+<%if logged_in? && current_user.role == "instructor" %>
+  <p>
+    <strong>Grade:</strong>
+    <%= @presentation.grade %>
+  </p>
+  <% end %>
 
+<%# add feedback here %>
 
 <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
 <%= link_to 'Back', presentations_path %>
