@@ -3,7 +3,7 @@ class CreateFeedbacks < ActiveRecord::Migration[6.0]
     create_table :feedbacks do |t|
       t.text :content
       t.string :submitted_by
-      t.integer :presentation_id
+      t.string :presentation_id
 
       t.timestamps
     end

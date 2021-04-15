@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_014038) do
+ActiveRecord::Schema.define(version: 2021_04_15_163852) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.text "content"
     t.string "submitted_by"
-    t.integer "presentation_id"
+    t.string "presentation_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2021_04_13_014038) do
   create_table "presentations", force: :cascade do |t|
     t.string "topic"
     t.datetime "date"
+    t.string "assigned_to"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "assigned_to"
   end
 
   create_table "users", force: :cascade do |t|

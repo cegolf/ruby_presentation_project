@@ -3,9 +3,9 @@
 one:
   content: MyText
   submitted_by: MyString
-  presentation_id: 1
+  presentation_id: MyString
 
 two:
   content: MyText
   submitted_by: MyString
-  presentation_id: 1
+  presentation_id: MyString

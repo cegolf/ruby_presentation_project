@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'sessions#new'
   resources :feedbacks
+  root 'sessions#new'
   resources :presentations
   resources :users
   #get '/login' to: 'sessions#new'
