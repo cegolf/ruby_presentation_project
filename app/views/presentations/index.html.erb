@@ -10,7 +10,7 @@
         <p id="notice"><%= notice %></p>
         <% if logged_in? && current_user.role == "instructor" %>
           <h1>Presentations</h1>
-          <%= link_to 'New Presentation', new_presentation_path, class: "btn btn-light", id: "add-presentation-btn" if current_user.role == "instructor" %>
+          <%= link_to 'New Presentation', new_presentation_path, class: "btn btn-success", id: "add-presentation-btn" if current_user.role == "instructor" %>
           <br>
           <br>
         <% end %>
@@ -59,7 +59,7 @@
         <%if logged_in? && current_user.role == "instructor" %>
           <p id="notice"><%= notice %></p>
           <h1>Student Roster</h1>
-          <%= link_to 'Add Student', new_user_path, class: "btn btn-light", id: "add-student-btn" %>
+          <%= link_to 'Add Student', new_user_path, class: "btn btn-success", id: "add-student-btn" %>
           
           <br>
           <br>
