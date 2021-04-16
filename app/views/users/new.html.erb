@@ -1,5 +1,8 @@
-<h1>New User</h1>
 
-<%= render 'form', user: @user %>
+<div class="new-user-container">
+    <h1>New User</h1>
+    <%= render 'form', user: @user %>
+    <%= link_to 'Back', presentations_path, class: "btn btn-primary", id: "user-back" %>
+</div>
 
-<%= link_to 'Back', users_path %>
+

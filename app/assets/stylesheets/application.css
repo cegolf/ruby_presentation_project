@@ -62,9 +62,12 @@ input {
   right: 15em;
   position: absolute;
 }
-.content-container {
-  background-color: silver;
-  margin-bottom: 0%;
-  position: relative;
-  height: 80vh;
+.new-user-container,
+.new-presentation-container {
+  width: 30%;
+  margin-left: 35%;
+}
+#pres-back,
+#user-back {
+  color: white;
 }

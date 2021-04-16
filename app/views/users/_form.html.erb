@@ -28,10 +28,14 @@
 
   <div class="field">
     <%= form.label :role %>
-    <%= form.text_field :role %>
+    <select class="form-select" id="user_role" name="user[role]">
+      <option selected value="student">student</option> 
+      <option value="instructor">instructor</option> 
+      </select>
+  
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-success" %>
   </div>
 <% end %>
