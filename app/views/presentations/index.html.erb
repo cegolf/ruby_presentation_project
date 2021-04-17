@@ -2,8 +2,7 @@
 <html>
 <head>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-</head
->
+</head>
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -11,7 +10,7 @@
         <p id="notice"><%= notice %></p>
         <% if logged_in? && current_user.role == "instructor" %>
           <h1>Presentations</h1>
-          <%= link_to 'New Presentation', new_presentation_path, class: "btn btn-light", id: "add-presentation-btn" if current_user.role == "instructor" %>
+          <%= link_to 'New Presentation', new_presentation_path, class: "btn btn-success", id: "add-presentation-btn" if current_user.role == "instructor" %>
           <br>
           <br>
         <% end %>
@@ -40,10 +39,13 @@
                 <% end %>
                 <td style="padding:0 5px;"><%= link_to 'Show', presentation %></td>
                 <% if logged_in? && current_user.role == "instructor" %>
-                  <td style="padding:0 5px;"><%= link_to 'Edit', edit_presentation_path(presentation) %></td>
-                  <td><%= link_to 'Delete', presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td style="padding:0 5px;"><%= link_to  icon("pencil-square", class: "text-success"), edit_presentation_path(presentation) %></td>
+                  
+                  <td><%= link_to icon("x-octagon", class: "text-danger"), presentation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 <%end%>
-                <td style="padding:0 5px;"><%= link_to 'Leave Feedback', new_feedback_path%></td>
+                <% if logged_in? && current_user.role == "student" %>
+                  <td style="padding:0 5px;"><%= link_to 'Leave Feedback', new_feedback_path%></td>
+                <%end%>
               </tr>
             <% end %>
             
@@ -57,7 +59,7 @@
         <%if logged_in? && current_user.role == "instructor" %>
           <p id="notice"><%= notice %></p>
           <h1>Student Roster</h1>
-          <%= link_to 'Add Student', new_user_path, class: "btn btn-light", id: "add-student-btn" %>
+          <%= link_to 'Add Student', new_user_path, class: "btn btn-success", id: "add-student-btn" %>
           
           <br>
           <br>
@@ -77,8 +79,8 @@
                   <td style="padding:0 15px;"><%= user.email %></td>
                   <td style="padding:0 15px;"><%= user.role %></td>
                   <td style="padding:0 5px;"><%= link_to 'Show', user %></td>
-                  <td style="padding:0 5px;"><%= link_to 'Edit', edit_user_path(user) %></td>
-                  <td><%= link_to 'Remove', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <td style="padding:0 5px;"><%= link_to icon("pencil-square", class: "text-success"), edit_user_path(user) %></td>
+                  <td><%= link_to icon("x-octagon", class: "text-danger"), user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                 </tr>
               <% end %>
             </tbody>
@@ -119,3 +121,4 @@
     </div>
   </div>
 </div>
+</html>

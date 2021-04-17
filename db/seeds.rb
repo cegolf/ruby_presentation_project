@@ -7,8 +7,32 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker' 
 
-#user = User.create([{name: 'Admin', email: 'admin@osu.edu', password: 'admin2021', role: 'instructor'}])
+user = User.create([{name: 'Admin', email: 'admin@osu.edu', password: 'admin2021', role: 'instructor'}])
+user = User.create([{name: 'Chris', email: 'egolf.8@osu.edu', password: 'admin2021', role: 'instructor'}])
 
-15.times do
+#this number is used to determine number of students, presentations, and feedbacks.
+generation_number = 15
+
+#generate students
+generation_number.times do
     User.create([{name: Faker::Name.first_name, email: Faker::Internet.email, password: 'user', role: 'student'}])
 end
+
+#generate presentations
+ students = User.where(role: "student").select("email")
+ students.each do |student|
+    Presentation.create([{topic: Faker::Company.industry,date: Faker::Time.forward(days: 30, period: :morning), assigned_to: student.email }])
+ end
+
+#generate feedback. Outer loop allows for X number feedbacks per presentation
+ 3.times do 
+    
+    pres_id = generation_number
+    students.each do |student|
+        Feedback.create([{content: Faker::Lorem.paragraph(sentence_count: 4), submitted_by: student.email, presentation_id: pres_id}])
+        pres_id -= 1
+    end
+end
+
+ 
+ 

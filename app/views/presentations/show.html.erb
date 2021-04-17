@@ -1,27 +1,48 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
 
-<p>
-  <strong>Topic:</strong>
-  <%= @presentation.topic %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="leftside">
+        <p id="notice"><%= notice %></p>
+        <h1>Presentation</h1>
+        <p>
+          <strong>Topic:</strong>
+          <%= @presentation.topic %>
+        </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @presentation.date %>
-</p>
+        <p>
+          <strong>Date:</strong>
+          <%= @presentation.date %>
+        </p>
 
-<p>
-  <strong>Presentor:</strong>
-  <%= @presentation.assigned_to %>
-</p>
-<%if logged_in? && current_user.role == "instructor" %>
-  <p>
-    <strong>Grade:</strong>
-    <%= @presentation.grade %>
-  </p>
-  <% end %>
+        <p>
+          <strong>Presentor:</strong>
+          <%= @presentation.assigned_to %>
+        </p>
+        <%if logged_in? && current_user.role == "instructor" %>
+          <p>
+            <strong>Grade:</strong>
+            <%= @presentation.grade %>
+          </p>
+        <% end %>
 
-<%# add feedback here %>
+        <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
+        <%= link_to 'Back', presentations_path %>
 
-<%= link_to 'Edit', edit_presentation_path(@presentation) %> |
-<%= link_to 'Back', presentations_path %>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="rightside">
+        <h1>Student Feedback</h1>
+
+      </div>
+    </div>
+  </div>
+</div>
+</html>
