@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2021_04_17_170701) do
   create_table "presentations", force: :cascade do |t|
     t.string "topic"
     t.datetime "date"
+    t.string "assigned_to"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "assigned_to"
     t.integer "grade"
   end
 
