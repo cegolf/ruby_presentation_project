@@ -19,9 +19,15 @@ end
 
 #generate presentations
  students = User.where(role: "student").select("email")
+ counter = 1
  students.each do |student|
-    Presentation.create([{topic: Faker::Company.industry,date: Faker::Time.forward(days: 30, period: :morning), assigned_to: student.email }])
- end
+    if(counter % 3 == 0)
+        Presentation.create([{topic: Faker::Company.industry,date: Faker::Time.forward(days: 30, period: :morning), assigned_to: student.email}])
+    else
+        Presentation.create([{topic: Faker::Company.industry,date: Faker::Time.forward(days: 30, period: :morning), assigned_to: student.email,grade: Faker::Number.between(from: 0, to: 100) }])
+    end
+    counter += 1
+end
 
 #generate feedback. Outer loop allows for X number feedbacks per presentation
  3.times do 
