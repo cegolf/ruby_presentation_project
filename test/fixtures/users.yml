@@ -5,11 +5,9 @@ one:
   email: MyString
   password: MyString
   role: MyString
-  group: 1
 
 two:
   name: MyString
   email: MyString
   password: MyString
   role: MyString
-  group: 1

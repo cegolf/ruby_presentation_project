@@ -15,7 +15,6 @@ class UsersTest < ApplicationSystemTestCase
     click_on "New User"
 
     fill_in "Email", with: @user.email
-    fill_in "Group", with: @user.group
     fill_in "Name", with: @user.name
     fill_in "Password", with: @user.password
     fill_in "Role", with: @user.role
@@ -30,7 +29,6 @@ class UsersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Email", with: @user.email
-    fill_in "Group", with: @user.group
     fill_in "Name", with: @user.name
     fill_in "Password", with: @user.password
     fill_in "Role", with: @user.role
