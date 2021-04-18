@@ -31,7 +31,7 @@
                 <td><%= presentation.topic %></td>
                 <td style="padding:0 15px;"><%= presentation.date %></td>
                 <% if logged_in? && current_user.role == "instructor" %>
-                  <td style="padding:0 25px;"><span class="badge rounded-pill bg-primary"><%= presentation.grade%>%</span></td>
+                  <td style="padding:0 17px;"><span class="badge rounded-pill bg-primary" id='grade-pill'><%= presentation.grade%>%</span></td>
                 <% end %>
                 <td style="padding:0 5px;"><%= link_to 'Show', presentation %></td>
                 <% if logged_in? && current_user.role == "instructor" %>
