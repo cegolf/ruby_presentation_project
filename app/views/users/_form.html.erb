@@ -28,14 +28,17 @@
 
   <div class="field">
     <%= form.label :role %>
-    <select class="form-select" id="user_role" name="user[role]">
-      <option selected value="student">student</option> 
-      <option value="instructor">instructor</option> 
-    </select>
-  
+ 
+    <%= form.select :role, ['student','instructor']%>
   </div>
 
   <div class="actions">
     <%= form.submit class: "btn btn-success" %>
   </div>
 <% end %>
+<script>
+
+  document.getElementById('user_role').classList.add('form-select');
+
+</script>
+
