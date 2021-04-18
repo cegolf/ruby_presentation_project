@@ -3,12 +3,13 @@
     <div class='row'>
     <div class='col-4'>
     </div>
-        <div class='col-4'>
-            <h1>Editing User</h1>
-            <%= render 'form', user: @user %>
-            <%= link_to 'Back', presentations_path, class:'btn btn-primary', id:'user-back' %>
-        </div>
-        <div class='col-4'>
+      <div class='col-4'>
+        <p id="notice"><%= notice %></p>
+        <h1>Editing User</h1>
+        <%= render 'form', user: @user %>
+        <%= link_to 'Back', presentations_path, class:'btn btn-primary', id:'user-back' %>
+      </div>
+      <div class='col-4'>
     </div>
 </div>
 
