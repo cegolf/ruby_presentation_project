@@ -84,6 +84,7 @@
         <% end %>
 
         <%if current_user.role == "student"%>
+          <p id="notice"><%= notice %></p>
           <h1>My Presentations</h1>
 
           <table>
@@ -97,9 +98,10 @@
             <tbody>
               <%@presentations.each do |presentation| %>
                 <tr>
-                  <%if logged_in? && current_user.name == presentation.assigned_to %>
+                  <%if logged_in? && current_user.email == presentation.assigned_to %>
                     <td><%= presentation.topic %></td>
                     <td style="padding:0 15px;"><%= presentation.date %></td>
+                    <td style="padding:0 5px;"><%= link_to 'Show', presentation %></td>
                   <%end%>
                 </tr>
               <% end %>
