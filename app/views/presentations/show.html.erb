@@ -30,13 +30,20 @@
 
       </div>
     </div>
-    
+    <% if logged_in? && ((current_user.email == @presentation.assigned_to) || (current_user.role == 'instructor')) %>
     <div class="col-md-6">
       <div class="rightside">
         <h1>Student Feedback</h1>
-
+        <ul>
+        <% Feedback.all.each do |feedback|%>
+            <% if feedback.presentation_id == @presentation.id%>
+              <li><%= feedback.content%></li>
+            <% end %>
+        <% end %>
+        </ul>
       </div>
     </div>
+    <% end %>
   </div>
 </div>
 </html>
