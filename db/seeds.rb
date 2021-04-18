@@ -32,10 +32,10 @@ end
 #generate feedback. Outer loop allows for X number feedbacks per presentation
  3.times do 
     
-    pres_id = generation_number
+    counter = generation_number-1
     students.each do |student|
-        Feedback.create([{content: Faker::Lorem.paragraph(sentence_count: 4), submitted_by: student.email, presentation_id: pres_id}])
-        pres_id -= 1
+        Feedback.create([{content: Faker::Lorem.paragraph(sentence_count: 4), submitted_by: student.email, presentation_id: students[counter].email}])
+        counter -= 1
     end
 end
 
