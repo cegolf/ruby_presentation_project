@@ -37,7 +37,7 @@
         <h1>Student Feedback</h1>
         <ul>
         <% Feedback.all.each do |feedback|%>
-            <% if feedback.presentation_id == @presentation.id%>
+            <% if feedback.presentation_id == @presentation.assigned_to%>
               <li><%= feedback.content%></li>
             <% end %>
         <% end %>
