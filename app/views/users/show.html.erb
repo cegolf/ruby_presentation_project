@@ -1,26 +1,64 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+    </div>
+    <div class="col">
+      <p id="notice"><%= notice %></p>
+      <h1>Student Information</h1>
+      <br><br>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    </div>
+    <div class="col">
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
 
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
+    </div>
+    <div class="col">
+    <h4>
+  	<strong>Name:</strong>
+  	<%= @user.name %>
+      </h4>
+      
+      <h4>
+  	<strong>Email:</strong>
+  	<%= @user.email %>
+      </h4>
+      
+      <h4>
+  	<strong>Password:</strong>
+  	<%= @user.password %>
+      </h4>
+      
+      <h4>
+  	<strong>Role:</strong>
+  	<%= @user.role %>
+      </h4>
+      <br><br>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col">
+
+    </div>
+    <div class="col">
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <!-- this was users_path before-->
+      <%= link_to 'Back', presentations_path %>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<!-- this was users_path before-->
-<%= link_to 'Back', presentations_path %>
+
+
+
