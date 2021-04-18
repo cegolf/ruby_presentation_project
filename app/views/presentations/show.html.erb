@@ -24,7 +24,7 @@
             <%= @presentation.grade %>
           </p>
         <% end %>
-         <% if logged_in? && (current_user.role == 'instructor')) %>
+         <% if logged_in? && (current_user.role == "instructor") %>
         <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
         <% end %>
         <%= link_to 'Back', presentations_path %>
@@ -36,13 +36,13 @@
       <div class="rightside">
         <p id="notice"><%= notice %></p>
         <h1>Student Feedback</h1>
-        <ul>
+        <ol>
         <% Feedback.all.each do |feedback|%>
             <% if feedback.presentation_id == @presentation.assigned_to%>
               <li><%= feedback.content%></li>
             <% end %>
         <% end %>
-        </ul>
+        </ol>
       </div>
     </div>
     <% end %>
