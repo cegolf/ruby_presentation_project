@@ -24,8 +24,9 @@
             <%= @presentation.grade %>
           </p>
         <% end %>
-
+         <% if logged_in? && (current_user.role == 'instructor')) %>
         <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
+        <% end %>
         <%= link_to 'Back', presentations_path %>
 
       </div>
