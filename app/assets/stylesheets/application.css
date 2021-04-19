@@ -57,6 +57,7 @@ input {
   margin-top: 2.5em;
   right: 15em;
   position: absolute;
+  color: white;
 }
 .new-user-container,
 .new-presentation-container {
