@@ -33,10 +33,12 @@ end
 
 #generate feedback. Outer loop allows for X number feedbacks per presentation
  3.times do 
-    
+    shuffled_students = students.shuffle
     counter = generation_number
-    students.each do |student|
-        Feedback.create([{content: Faker::Lorem.paragraph(sentence_count: 4), submitted_by: student.email, presentation_id: students[counter].email}])
+    shuffled_students.each do |student|
+        if(student.email !=  students[counter].email )
+            Feedback.create([{content: Faker::Lorem.paragraph(sentence_count: 4), submitted_by: student.email, presentation_id: shuffled_students[counter].email}])
+        end
         counter -= 1
     end
 end
