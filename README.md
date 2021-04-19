@@ -7,13 +7,9 @@ After cloning the repository and navigating to the project folder using the cd c
 
 1) Run `bundle install`
 2) Run `bundle update`
-3) Run `rails db:migrate` (if there was an error do steps 5 and 6)
-4) If there is a yarn error run `yarn install --check-files`
-5) run `rails db:migrate`
-6) run `rails server`
-7) go to localhost:3000 on Firefox(if successful should see a simple login page)
+3) Run `yarn add bootstrap-icons`
+4) Run `rails db:setup`
+5) Run `rails server`
+6) go to localhost:3000 on Firefox(if successful should see a simple login page)
 
 
-`yarn add bootstrap-icons`
-`rails db:setup`
-`rails server`
