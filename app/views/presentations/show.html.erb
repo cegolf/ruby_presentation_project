@@ -27,7 +27,7 @@
          <% if logged_in? && (current_user.role == "instructor") %>
         <%= link_to 'Edit', edit_presentation_path(@presentation) %> |
         <% end %>
-        <%= link_to 'Back', presentations_path %>
+        <%= link_to 'Back', presentations_path,class: "btn btn-primary", id: "presentation-back" %>
 
       </div>
     </div>

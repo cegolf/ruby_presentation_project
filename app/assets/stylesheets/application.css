@@ -33,7 +33,6 @@
   background-color: #ee7d7d;
   height: 8em;
   position: fixed;
-  z-index: 999;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -53,10 +52,6 @@ input {
 #submit-button {
   margin-top: 1em;
 }
-#add-presentation-btn,
-#add-student-btn {
-  color: white;
-}
 #logout-btn {
   text-align: right;
   margin-top: 2.5em;
@@ -69,6 +64,10 @@ input {
   margin-left: 35%;
 }
 #pres-back,
-#user-back {
+#user-back,
+#feedback-back,
+#presentation-back,
+#add-presentation-btn,
+#add-student-btn {
   color: white;
 }
