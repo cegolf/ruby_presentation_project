@@ -12,3 +12,8 @@ After cloning the repository and navigating to the project folder using the cd c
 5) run `rails db:migrate`
 6) run `rails server`
 7) go to localhost:3000 on Firefox(if successful should see a simple login page)
+
+
+`yarn add bootstrap-icons`
+`rails db:setup`
+`rails server`
