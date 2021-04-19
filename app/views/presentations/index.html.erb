@@ -54,7 +54,7 @@
       <div class="rightside">
         <%if logged_in? && current_user.role == "instructor" %>
           <p id="notice"><%= notice %></p>
-          <h1>Student Roster</h1>
+          <h1>Class Roster</h1>
           <%= link_to 'Add Student', new_user_path, class: "btn btn-success", id: "add-student-btn" %>
           
           <br>
