@@ -68,6 +68,7 @@ input {
 #feedback-back,
 #presentation-back,
 #add-presentation-btn,
-#add-student-btn {
+#add-student-btn,
+#logout-btn {
   color: white;
 }
