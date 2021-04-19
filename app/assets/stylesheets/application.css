@@ -26,11 +26,11 @@
 }
 .header-container {
   margin-top: 0%;
-  background-color: #ee7d7d;
+  background-color: #c46262;
   height: 8em;
 }
 .footer {
-  background-color: #ee7d7d;
+  background-color: #c46262;
   height: 8em;
   position: fixed;
   left: 0;
@@ -41,7 +41,7 @@ input,
 textarea,
 select,
 .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid #b8adad;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
