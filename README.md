@@ -10,6 +10,14 @@ After cloning the repository and navigating to the project folder using the cd c
 3) Run `yarn add bootstrap-icons`
 4) Run `rails db:setup`
 5) Run `rails server`
-6) go to localhost:3000 on Firefox(if successful should see a simple login page)
+6) go to localhost:3000 on Firefox(if successful should see a simple login page) 
 
+To login as an admin, enter these details: 
 
+Email: admin@osu.edu <br/>
+Password: admin2021
+
+To log in as a student, enter these details:
+
+Email: user@osu.edu<br/>
+Password: user
