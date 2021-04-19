@@ -9,7 +9,7 @@ require 'faker'
 
 user = User.create([{name: 'Admin', email: 'admin@osu.edu', password: 'admin2021', role: 'instructor'}])
 
-student_user = User.create([{name: 'Test Student', email: 'user@osu.edu', password: 'user', role: 'instructor'}])
+student_user = User.create([{name: 'Test Student', email: 'user@osu.edu', password: 'user', role: 'student'}])
 
 #this number is used to determine number of students, presentations, and feedbacks.
 generation_number = 15
