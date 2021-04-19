@@ -3,22 +3,21 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+After cloning the repository and navigating to the project folder using the cd command, here are the necessary terminal commands that need to be run. 
 
-* Ruby version
+1) Run `bundle install`
+2) Run `bundle update`
+3) Run `yarn add bootstrap-icons`
+4) Run `rails db:setup`
+5) Run `rails server`
+6) go to localhost:3000 on Firefox(if successful should see a simple login page) 
 
-* System dependencies
+To login as an admin, enter these details: 
 
-* Configuration
+Email: admin@osu.edu <br/>
+Password: admin2021
 
-* Database creation
+To log in as a student, enter these details:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Email: user@osu.edu<br/>
+Password: user
