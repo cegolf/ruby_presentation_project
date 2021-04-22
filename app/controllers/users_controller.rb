@@ -51,6 +51,19 @@ class UsersController < ApplicationController
 
   # DELETE /users/1 or /users/1.json
   def destroy
+    @feedbacks = Feedback.all
+    @presentations = Presentation.all
+    @feedbacks.each do |feedback| 
+      if feedback.submitted_by == @user.email
+        feedback.destroy
+      end
+    end
+     @presentations.each do |presentation|
+      if presentation.assigned_to == @user.email
+        presentation.destroy
+      end
+    end
+
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: "User was successfully destroyed." }

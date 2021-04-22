@@ -49,6 +49,13 @@ class PresentationsController < ApplicationController
 
   # DELETE /presentations/1 or /presentations/1.json
   def destroy
+    @feedbacks = Feedback.all
+    @feedbacks.each do |feedback|
+      if feedback.presentation_id == @presentation.assigned_to
+        feedback.destroy
+      end
+    end
+    
     @presentation.destroy
     respond_to do |format|
       format.html { redirect_to presentations_url, notice: "Presentation was successfully destroyed." }
